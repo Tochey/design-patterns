@@ -3,30 +3,30 @@ from dataclasses import dataclass
 from typing import Optional
 
 #often leads to tight coupling and code duplication
-# @dataclass
-# class Monster(ABC):
-#     name : str
+@dataclass
+class Monster(ABC):
+    name : str
     
-#     def talk(self):
-#         return f'My name is {self.name}'
+    def talk(self):
+        return f'My name is {self.name}'
     
-#     def attack(self):
-#         print(f'{self.name} attacked')
+    def attack(self):
+        print(f'{self.name} attacked')
         
-#     def walk(self):
-#         print(f'{self.name} walked')
+    def walk(self):
+        print(f'{self.name} walked')
 
-# class FlyingMonster(Monster):
-#     def fly(self):
-#         print(f'{super().talk()} and i flew')
+class FlyingMonster(Monster):
+    def fly(self):
+        print(f'{super().talk()} and i flew')
         
 
-# class SwimmingMonster(Monster):
-#     def swim(self):
-#         print(f'{super().talk()} and i swam')
+class SwimmingMonster(Monster):
+    def swim(self):
+        print(f'{super().talk()} and i swam')
 
-# class FlyingSwimmingMonster(Monster):
-#     pass
+class FlyingSwimmingMonster(Monster):
+    pass
     
 #class heirachy 
 @dataclass    
